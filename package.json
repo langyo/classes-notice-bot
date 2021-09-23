@@ -4,7 +4,7 @@
   "description": "A bot backend for QQ IM that can help classmates not be late for class.",
   "scripts": {
     "build": "gulp taskBuild",
-    "start": "gulp taskStart",
+    "start": "ts-node ./src/server/index.ts",
     "watch": "gulp taskWatch"
   },
   "repository": {
