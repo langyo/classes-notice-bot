@@ -3,8 +3,8 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 const { qq, key } = JSON.parse(
-  readFileSync(join(process.cwd(), './system-config.json'), 'utf8')
-);
+  readFileSync(join(process.cwd(), './dist/config.json'), 'utf8')
+).accounts[0];
 const client = createClient(qq);
 
 //监听上线事件

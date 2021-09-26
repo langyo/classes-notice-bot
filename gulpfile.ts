@@ -1,4 +1,5 @@
 import { series, watch, src, dest } from 'gulp';
+import * as ts from 'gulp-typescript';
 import * as webpack from 'webpack-stream';
 import { join } from 'path';
 
@@ -59,6 +60,16 @@ export const taskBuild = series(
         })
       )
       .pipe(dest(join(__dirname, './dist/')));
+  },
+  function webpackBuildForFrontend() {
+    return src(join(__dirname, './src/server/main.ts'))
+      .pipe(
+        ts({
+          module: 'commonjs',
+          allowSyntheticDefaultImports: true,
+        })
+      )
+      .js.pipe(dest(join(__dirname, './dist/')));
   }
 );
 

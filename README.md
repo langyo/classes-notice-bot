@@ -1,2 +1,37 @@
-# classes-notice-bot
-A bot backend for QQ IM that can help classmates not be late for class.
+# OICQ 机器人仪表板
+
+> 敬告：该项目旨在用于学习，请勿用于非法用途
+
+## 介绍
+
+本项目是基于 oicq 开发的 QQ 机器人管理控制引擎，运行环境仅需您的机器拥有 NodeJS 与 Git。
+
+本项目的性质类似流行的浏览器插件 TamperMonkey（油猴），适合对计算机技术有一定基础的用户使用，有一定的使用门槛。
+
+> WIP：项目仍然在积极开发中，大部分功能暂时不可用，还请耐心等待。
+
+## 安装
+
+> 请确保您的环境已经准备好了 NodeJS 与 Git。
+
+- 获取项目
+
+`git clone https://github.com/langyo/oicq-dashboard`
+
+- 安装依赖
+
+`npm i` 或 `yarn`（如果您的机器已经全局安装 yarn，强烈建议使用）。
+
+- 运行
+
+`npm start`
+
+## 配置
+
+默认情况下，本项目的配置文件是放在项目所在文件夹的 `/dist/config.json` 文件中，不过您也可以通过额外指定程序参数来手动控制配置文件的位置：
+
+`npm start ./my_bot/config.json`
+
+所有额外的数据文件也将在配置文件的同级文件夹下储存，包括在运行过程中产生的消息缓存与媒体数据。
+
+在未指定具体配置文件路径且默认路径也没有配置文件的情况下，程序开始时会自动补齐，无需用户额外操作。

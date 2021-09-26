@@ -4,7 +4,7 @@
   "description": "A bot backend for QQ IM that can help classmates not be late for class.",
   "scripts": {
     "build": "gulp taskBuild",
-    "start": "ts-node ./src/server/index.ts",
+    "start": "node ./dist/main.js",
     "watch": "gulp taskWatch"
   },
   "repository": {
@@ -21,7 +21,6 @@
     "@emotion/react": "^11.4.1",
     "@mdi/js": "^6.1.95",
     "@mdi/react": "^1.5.0",
-    "oicq": "^1.20.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "uuid": "^8.3.2"
@@ -42,6 +41,7 @@
     "css-loader": "^6.2.0",
     "gulp": "^4.0.2",
     "gulp-typescript": "^6.0.0-alpha.1",
+    "oicq": "latest",
     "sass": "^1.38.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
